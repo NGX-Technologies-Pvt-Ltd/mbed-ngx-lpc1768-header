@@ -1,0 +1,4 @@
+[submodule "mbed-os"]
+	path = mbed-os
+	url = git@github.com:ARMmbed/mbed-os.git
+	branch = master
