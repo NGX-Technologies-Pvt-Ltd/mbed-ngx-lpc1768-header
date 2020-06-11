@@ -12,3 +12,7 @@ python mbed-os/tools/make.py -t GCC_ARM -m TARGET --source . --build ./build
 
 * Blueboard LPC1768 Header : NGX_BLUEBOARD_LPC1768_H
 * LPC1768 Xplorer : NGX_LPC1768_Xplorer
+
+#### Project Setup:
+git clone --recursive repo-URL
+
