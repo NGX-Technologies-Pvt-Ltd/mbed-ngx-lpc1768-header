@@ -1,4 +1,4 @@
-![Test Image 1](BlueBoard_LPC1768_H.png)
+![Test Image 1](./Images/BlueBoard_LPC1768_H.png)
 # This repository contains support for NGX development board on mbed platform
 * [Blueboard LPC1768 Header](https://ngxkart.com/collections/blueboard/products/blueboard-lpc1768-h)
 <!-- * [LPC1768 Xplorer](https://ngxkart.com/collections/xplorer/products/lpc1768-xplorer)
