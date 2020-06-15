@@ -5,8 +5,8 @@
 
 # External dependencies
 <!-- * install [VSCode]() -->
-* Install [Python 2.7.11]() or [above]() and add to PATH
-* install [Git]() and add to PATH
+* Install [Python 2.7.11](https://www.python.org/download/releases/2.7/) or [above](https://www.python.org/downloads/release/python-383/) and add to PATH
+* install [Git](https://git-scm.com/download/win) and add to PATH
 
 #### Project Setup:
 * git clone --recursive repo-URL
