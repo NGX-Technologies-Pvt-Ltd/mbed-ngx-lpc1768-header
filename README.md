@@ -5,8 +5,9 @@
 
 # External dependencies
 <!-- * install [VSCode]() -->
-* Install [Python 2.7.11](https://www.python.org/download/releases/2.7/) or [above](https://www.python.org/downloads/release/python-383/) and add to PATH
+* Install [Python 2.7.11](https://www.python.org/download/releases/2.7/) or [above](https://www.python.org/downloads/release/python-377/) and add to PATH
 * Install [pip](https://www.liquidweb.com/kb/install-pip-windows/)
+* Install [gcc-arm-none-eabi](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads)
 * install [Git](https://git-scm.com/download/win) and add to PATH
 
 #### Project Setup:
