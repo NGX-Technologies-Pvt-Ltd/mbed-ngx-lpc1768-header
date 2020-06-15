@@ -6,12 +6,13 @@
 # External dependencies
 <!-- * install [VSCode]() -->
 * Install [Python 2.7.11](https://www.python.org/download/releases/2.7/) or [above](https://www.python.org/downloads/release/python-383/) and add to PATH
+* Install [pip](https://www.liquidweb.com/kb/install-pip-windows/)
 * install [Git](https://git-scm.com/download/win) and add to PATH
 
 #### Project Setup:
 * git clone --recursive repo-URL
 * cd mbed-ngx-lpc1768-header
-* pip install -r requirement.txt
+* pip install -r mbed-os/requirements.txt
 * python mbed-os/tools/make.py -t GCC_ARM -m NGX_BLUEBOARD_LPC1768_H --source . --build ./build
 * bin files will be generated in the build folder i.e. mbed-ngx-lpc1768-header.bin
 * The bin files can be flashed using [CoFlash](./tools/CoFlash-1.4.8.exe)
