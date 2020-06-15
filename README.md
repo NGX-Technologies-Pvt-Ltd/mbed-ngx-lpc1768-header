@@ -14,7 +14,7 @@
 * pip install -r requirement.txt
 * python mbed-os/tools/make.py -t GCC_ARM -m NGX_BLUEBOARD_LPC1768_H --source . --build ./build
 * bin files will be generated in the build folder i.e. mbed-ngx-lpc1768-header.bin
-* The bin files can be flashed using [CoFlash]()
+* The bin files can be flashed using [CoFlash](./tools/CoFlash-1.4.8.exe)
 
 <!-- ###### Replace TARGET with below name while building:
 
