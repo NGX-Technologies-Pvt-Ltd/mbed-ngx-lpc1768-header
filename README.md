@@ -10,6 +10,7 @@
 * install [Git](https://git-scm.com/download/win) and add to PATH
 
 #### Project Setup:
+* open Git bash
 * git clone --recursive repo-URL
 * cd mbed-ngx-lpc1768-header
 * pip install -r mbed-os/requirements.txt
