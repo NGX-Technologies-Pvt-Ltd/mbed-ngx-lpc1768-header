@@ -46,9 +46,9 @@
 ### Programming with CoFlash programming utility
 Blueboard LPC1768 Header can be programmed using standard 20-pin JTAG or SWD interface connector using any standard JTAG adapter.
 
-[Image1](./Images/coflash1.png)
+![CoFlash1](./Images/coflash1.PNG)
 
-[Image2](./Images/coflash2.png)
+![CoFlash2](./Images/coflash2.PNG)
 
 This is the pinout of the NGX Blueboard LPC1768 H:
 
