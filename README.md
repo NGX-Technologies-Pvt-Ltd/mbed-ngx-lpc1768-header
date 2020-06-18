@@ -1,8 +1,6 @@
 ![Test Image 1](./Images/BlueBoard_LPC1768_H.png)
 # NGX Blueboard-LPC1768-H board support for Mbed OS
 * [Blueboard LPC1768 Header](https://ngxkart.com/collections/blueboard/products/blueboard-lpc1768-h)
-<!-- * [LPC1768 Xplorer](https://ngxkart.com/collections/xplorer/products/lpc1768-xplorer)
-* [mbed-Xpresso Baseboard](https://ngxkart.com/products/mbed-xpresso-baseboard?_pos=2&_sid=8b2764250&_ss=r) -->
 
 # Features
 * mbed enabled
@@ -17,7 +15,6 @@
     * Ethernet, USB Host/Device, 4xUART, 3xI2C, 2xSPI
 
 # External dependencies
-<!-- * install [VSCode]() -->
 * Install [Python 2.7.11](https://www.python.org/download/releases/2.7/) or [above](https://www.python.org/downloads/release/python-377/) and add to PATH
 * Install [pip](https://www.liquidweb.com/kb/install-pip-windows/)
 * Install [gcc-arm-none-eabi](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads)
@@ -49,9 +46,9 @@
 ### Programming with CoFlash programming utility
 Blueboard LPC1768 Header can be programmed using standard 20-pin JTAG or SWD interface connector using any standard JTAG adapter.
 
-![](./Images/coflash1.png)
+[Image1](./Images/coflash1.png)
 
-![](./Images/coflash2.png)
+[Image2](./Images/coflash2.png)
 
 This is the pinout of the NGX Blueboard LPC1768 H:
 
