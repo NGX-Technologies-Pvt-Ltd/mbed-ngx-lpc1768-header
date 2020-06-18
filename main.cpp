@@ -1,8 +1,11 @@
 #include "mbed.h"
 #include "_24LCXXX.h"
 #include "USBSerial.h"
+#include "EthernetInterface.h"
+#include "TextLCD.h"
 
 static int testEEPROM(void);
+static int SocketDemo(void);
 
 DigitalOut testLed(LED1);
 DigitalOut usbLed(LED2);
@@ -15,8 +18,11 @@ _24LCXXX eeprom(&i2c, 0x50);
 
 USBSerial usbVCom(false, 0x1f00, 0x2012, 0x0001);
 
-int main() {    
+TextLCD lcd(J13_1, J13_2, J13_3, J13_4, J13_5, J13_6);// rs, e, d4-d7
+
+int main() {
     usbVCom.connect();
+    lcd.printf("NGX LCD Demo\n");
     pc.baud(9600);
     pc.printf("NGX mbed LED blinky demo\r\n");
 
@@ -26,7 +32,8 @@ int main() {
     } else {
         pc.printf("Test EEPROM passed\r\n");
     }
-
+    pc.printf("NGX mbed Ethernet Example Demo Started\r\n");
+    SocketDemo();
     while(1) {
         if (usbVCom.connected()) {
             usbVCom.printf("I am a virtual COM port\r\n");
@@ -72,4 +79,41 @@ static int testEEPROM(void) {
         }
     } while (0);
     return retval;
+}
+
+// Network interface
+EthernetInterface net;
+
+// Socket demo
+static int SocketDemo(void) {
+    // Bring up the ethernet interface
+    pc.printf("Ethernet socket example\n");
+    net.connect();
+
+    // Show the network address
+    const char *ip = net.get_ip_address();
+    pc.printf("IP address is: %s\n", ip ? ip : "No IP");
+
+    // Open a socket on the network interface, and create a TCP connection to mbed.org
+    TCPSocket socket;
+    socket.open(&net);
+    socket.connect("www.arm.com", 80);
+
+    // Send a simple http request
+    char sbuffer[] = "GET / HTTP/1.1\r\nHost: www.arm.com\r\n\r\n";
+    int scount = socket.send(sbuffer, sizeof sbuffer);
+    pc.printf("sent %d [%.*s]\n", scount, strstr(sbuffer, "\r\n")-sbuffer, sbuffer);
+
+    // Recieve a simple http response and print out the response line
+    char rbuffer[64];
+    int rcount = socket.recv(rbuffer, sizeof rbuffer);
+    pc.printf("recv %d [%.*s]\n", rcount, strstr(rbuffer, "\r\n")-rbuffer, rbuffer);
+
+    // Close the socket to return its memory and bring down the network interface
+    socket.close();
+
+    // Bring down the ethernet interface
+    net.disconnect();
+    pc.printf("Done\n");
+    return 1;
 }
