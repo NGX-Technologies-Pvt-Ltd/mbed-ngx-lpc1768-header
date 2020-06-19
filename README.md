@@ -1,8 +1,11 @@
 ![Test Image 1](./Images/BlueBoard_LPC1768_H.png)
 # NGX Blueboard-LPC1768-H board support for Mbed OS
+## Pinout Diagram:
+![Test Image 1](./Images/Pinout.jpg)
+
 ## Buy Below:
-* [Japan - Akizuki](http://akizukidenshi.com/catalog/g/gM-06543/)
-* [NGX](https://ngxkart.com/collections/blueboard/products/blueboard-lpc1768-h)
+* [Japan](http://akizukidenshi.com/catalog/g/gM-06543/)
+* [Other Countries](https://ngxkart.com/collections/blueboard/products/blueboard-lpc1768-h)
 
 # Features
 * mbed enabled
@@ -15,9 +18,6 @@
     * Up to 100MHz
     * 512KB Flash, 64KB RAM 
     * Ethernet, USB Host/Device, 4xUART, 3xI2C, 2xSPI
-
-# Pinout Diagram:
-![Test Image 1](./Images/Pinout.jpg)
 
 # External tools dependencies
 * Install [Python 2.7.11](https://www.python.org/download/releases/2.7/) or [above](https://www.python.org/downloads/release/python-377/) and add to PATH
