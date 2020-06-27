@@ -69,12 +69,10 @@ class _24LCXXX
 private:
     int _i2c_address;
     I2C *_i2c;
-    Serial *_pc;
     bool _debug;
 
 public:
     _24LCXXX(I2C *i2c, const int address=I2C_ADDR_24LCXXX );
-    _24LCXXX(I2C *i2c, Serial *pc, const int address=I2C_ADDR_24LCXXX );
     int byte_write( int mem_addr, char data );
     int nbyte_write( int mem_addr, void *data, int size );
     int page_write( int mem_addr, char *data );

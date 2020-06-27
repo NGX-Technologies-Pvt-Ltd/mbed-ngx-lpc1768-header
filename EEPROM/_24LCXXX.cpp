@@ -46,12 +46,7 @@
 
 // Constractor
 _24LCXXX::_24LCXXX(I2C *i2c, const int address):
-    _i2c_address(address<<1), _i2c(i2c), _pc(NULL), _debug(false)
-{
-}
-
-_24LCXXX::_24LCXXX(I2C *i2c, Serial *pc, const int address):
-    _i2c_address(address<<1), _i2c(i2c), _pc(pc), _debug(true)
+    _i2c_address(address<<1), _i2c(i2c), _debug(false)
 {
 }
 
@@ -69,11 +64,11 @@ int _24LCXXX::byte_write( int mem_addr, char data )
     {
         if(res==0)
         {
-            _pc->printf("Success! Byte Data Write. \n");
+            printf("Success! Byte Data Write. \n");
         }
         else
         {
-            _pc->printf("Failed! Byte Data Write %d.\n", res);
+            printf("Failed! Byte Data Write %d.\n", res);
         }
     }
 
@@ -102,11 +97,11 @@ int _24LCXXX::nbyte_write( int mem_addr, void *data, int size )
         {
             if(res==0)
             {
-                _pc->printf("Success! N-Byte Data Write. \n");
+                printf("Success! N-Byte Data Write. \n");
             }
             else
             {
-                _pc->printf("Failed! N-Byte Data Write %d.\n", res);
+                printf("Failed! N-Byte Data Write %d.\n", res);
             }
         }
 
@@ -144,11 +139,11 @@ int _24LCXXX::page_write( int mem_addr, char *data )
     {
         if(res==0)
         {
-            _pc->printf("Success! Page Data Write. \n");
+            printf("Success! Page Data Write. \n");
         }
         else
         {
-            _pc->printf("Failed! Page Data Write %d.\n", res);
+            printf("Failed! Page Data Write %d.\n", res);
         }
     }
 
@@ -169,11 +164,11 @@ int _24LCXXX::nbyte_read( int mem_addr, void *data, int size )
     {
         if(res==0)
         {
-            _pc->printf("Success! nbyte read address send. \n");
+            printf("Success! nbyte read address send. \n");
         }
         else
         {
-            _pc->printf("Failed! nbyte read address send %d.\n", res);
+            printf("Failed! nbyte read address send %d.\n", res);
         }
     }
 
@@ -183,11 +178,11 @@ int _24LCXXX::nbyte_read( int mem_addr, void *data, int size )
     {
         if(res==0)
         {
-            _pc->printf("Success! nbyte read address send. \n");
+            printf("Success! nbyte read address send. \n");
         }
         else
         {
-            _pc->printf("Failed! nbyte read address send %d.\n", res);
+            printf("Failed! nbyte read address send %d.\n", res);
         }
     }
 
