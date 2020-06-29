@@ -20,14 +20,14 @@
     * Ethernet, USB Host/Device, 4xUART, 3xI2C, 2xSPI
 
 # External tools dependencies
-* Install [Python 2.7.11](https://www.python.org/download/releases/2.7/) or [above](https://www.python.org/downloads/release/python-377/) and add to PATH
-* Install [pip](https://www.liquidweb.com/kb/install-pip-windows/)
+* Install [Python 2.7.18](https://www.python.org/downloads/release/python-2718/) or [above](https://www.python.org/downloads/release/python-383/) and add to PATH
+* Install [pip](https://www.liquidweb.com/kb/install-pip-windows/) and add to PATH (Ex: **c:/python27/scripts** in windows)
 * Install [gcc-arm-none-eabi](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads)
 * install [Git](https://git-scm.com/download/win) and add to PATH
 
 #### Project Setup:
 * open Git bash
-* git clone --recursive repo-URL
+* git clone --recursive https://github.com/vvkaggarwal12/mbed-ngx-lpc1768-header.git
 * cd mbed-ngx-lpc1768-header
 * pip install -r mbed-os/requirements.txt
 * python mbed-os/tools/make.py -t GCC_ARM -m NGX_BLUEBOARD_LPC1768_H --source . --build ./build
