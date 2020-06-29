@@ -26,12 +26,14 @@
 * install [Git](https://git-scm.com/download/win) and add to PATH
 
 #### Project Setup:
-* open Git bash
-* git clone --recursive https://github.com/vvkaggarwal12/mbed-ngx-lpc1768-header.git
-* cd mbed-ngx-lpc1768-header
-* pip install -r mbed-os/requirements.txt
-* python mbed-os/tools/make.py -t GCC_ARM -m NGX_BLUEBOARD_LPC1768_H --source . --build ./build
-* bin files will be generated in the **build** folder i.e. **mbed-ngx-lpc1768-header.bin**
+open Git bash
+
+    $ git clone --recursive https://github.com/vvkaggarwal12/mbed-ngx-lpc1768-header.git
+    $ cd mbed-ngx-lpc1768-header
+    $ pip install -r mbed-os/requirements.txt
+    $ python mbed-os/tools/make.py -t GCC_ARM -m NGX_BLUEBOARD_LPC1768_H --source . --build ./build
+
+* Output files will be generated in the **build** folder i.e. **mbed-ngx-lpc1768-header.bin**
 * The bin files can be flashed using [CoFlash](./tools/CoFlash-1.4.8.exe)
 
 ### Mbed OS version support
