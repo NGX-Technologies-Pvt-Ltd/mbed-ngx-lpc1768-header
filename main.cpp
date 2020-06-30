@@ -20,11 +20,10 @@ static BufferedSerial buffered_serial_obj(
 _24LCXXX eeprom(&i2c, 0x50);
 
 // TextLCD lcd(J13_1, J13_2, J13_3, J13_4, J13_5, J13_6);// rs, e, d4-d7
-// USBSerial usbVCom(false, 0x1f00, 0x2012, 1);
+USBSerial usbVCom(false, 0x1f00, 0x2012, 1);
  
 int main(void) {
-    // usbVCom.connect();
-    // usbVCom.wait_ready();
+    usbVCom.connect();
     // lcd.printf("NGX LCD Demo\n");
     printf("NGX mbed LED blinky demo\r\n");
 
@@ -35,11 +34,11 @@ int main(void) {
         printf("Test EEPROM passed\r\n");
     }
     printf("NGX mbed Ethernet Example Demo Started\r\n");
-    SocketDemo();
+    // SocketDemo();
     while(1) {
-        // if (usbVCom.connected()) {
-        //     usbVCom.printf("I am a virtual COM port\r\n");
-        // }
+        if (usbVCom.connected()) {
+            usbVCom.printf("I am a virtual COM port\r\n");
+        }
         testLed = 1;
         usbLed = 1;
         wait_us(50000);
